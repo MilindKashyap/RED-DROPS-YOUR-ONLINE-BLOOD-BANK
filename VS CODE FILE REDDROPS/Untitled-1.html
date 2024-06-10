@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: pink;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .donor-details {
+            display: none;
+            margin-top: 10px;
+            border: 1px solid pink;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Blood Bank Management System</h1>
+    </header>
+
+    <main>
+        <h1><centre>RED DROP</centre></h1>
+        <br>
+        <form id="addDonorForm">
+            <h2>DONOR DETAILS</h2>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <br>
+
+            <label for="bloodGroup">Blood Group:</label>
+            <input type="text" id="bloodGroup" name="bloodGroup" required>
+            <br>
+            <br>
+
+            <label for="units">Units Donated:</label>
+            <input type="number" id="units" name="units" required>
+            <br>
+            <br>
+
+            <label for="contactDetails">Contact Details:</label>
+            <input type="text" id="contactDetails" name="contactDetails" required>
+            <br>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <br>
+
+            <label for="date">Donation Date (YYYY-MM-DD):</label>
+            <input type="text" id="date" name="date" required>
+            <br>
+            <br>
+
+            <button type="button" onclick="addDonor()">Add Donor</button>
+        </form>
+
+        <h2>Donors in the Blood Bank</h2>
+        <table id="donorsTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Blood Group</th>
+                    <th>Units Donated</th>
+                    <th>Contact Details</th>
+                    <th>Email</th>
+                    <th>Donation Date</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Donor information will be displayed here -->
+            </tbody>
+        </table>
+
+        <!-- Donor Details Container -->
+        <div id="donorDetailsContainer" class="donor-details">
+            <h2>Donor Details</h2>
+            <p id="donorDetails"></p>
+        </div>
+    </main>
+
+    <script>
+        // Function to add a donor
+        function addDonor() {
+            // Your JavaScript logic to handle the form data and update the table
+            // You can use AJAX to send the data to the server
+        }
+
+        // Function to retrieve and display donors
+        function displayDonors() {
+            // Your JavaScript logic to retrieve donor data from the server and update the table
+            // You can use AJAX to get data from the server
+        }
+
+        // Function to display donor details when the link is clicked
+        function showDonorDetails(donorDetails) {
+            var donorDetailsContainer = document.getElementById('donorDetailsContainer');
+            var donorDetailsElement = document.getElementById('donorDetails');
+            donorDetailsElement.textContent = donorDetails;
+            donorDetailsContainer.style.display = 'block';
+        }
+
+        // Initial display of donors
+        displayDonors();
+    </script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
